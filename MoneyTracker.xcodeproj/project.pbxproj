@@ -1,0 +1,998 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47F3E1F9155864A4F7DDFE45 /* Pods_MoneyTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D9B600CF0DB0B3479F430 /* Pods_MoneyTracker.framework */; };
+		8C04F5341FB9C2BB001CFFA4 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C04F5331FB9C2BB001CFFA4 /* Enums.swift */; };
+		8C0DFD3A1FB5A48700511041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD391FB5A48700511041 /* MainTabBarController.swift */; };
+		8C0DFD3C1FB5D58300511041 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD3B1FB5D58300511041 /* InsertTableViewCell.swift */; };
+		8C0DFD3E1FB5DB4800511041 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD3D1FB5DB4800511041 /* AddExpenseViewController.swift */; };
+		8C0DFD401FB5DD4200511041 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD3F1FB5DD4200511041 /* AddExpenseViewModel.swift */; };
+		8C0DFD421FB5DDF100511041 /* AddExpenseViewModelFromCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD411FB5DDF100511041 /* AddExpenseViewModelFromCategory.swift */; };
+		8C0DFD4C1FB5FEE200511041 /* AddExpenseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD4B1FB5FEE200511041 /* AddExpenseCellViewModel.swift */; };
+		8C0DFD4E1FB6006000511041 /* AddExpenseCellViewModelFromEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFD4D1FB6006000511041 /* AddExpenseCellViewModelFromEntry.swift */; };
+		8C0F7A8C1FBDE3B30065D4E5 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A8B1FBDE3B30065D4E5 /* SettingsTableViewCell.swift */; };
+		8C0F7A8E1FBDE3D90065D4E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A8D1FBDE3D90065D4E5 /* SettingsViewController.swift */; };
+		8C0F7A901FBDE4EE0065D4E5 /* SettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A8F1FBDE4EE0065D4E5 /* SettingCellViewModel.swift */; };
+		8C0F7A931FBDE69A0065D4E5 /* SettingCellViewModelFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A921FBDE69A0065D4E5 /* SettingCellViewModelFromDB.swift */; };
+		8C0F7A951FBDE8770065D4E5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A941FBDE8770065D4E5 /* SettingsViewModel.swift */; };
+		8C0F7A971FBDE8860065D4E5 /* SettingsViewModelFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A961FBDE8860065D4E5 /* SettingsViewModelFromDB.swift */; };
+		8C0F7A991FBEEB5A0065D4E5 /* PasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A981FBEEB5A0065D4E5 /* PasswordLoginViewController.swift */; };
+		8C0F7A9C1FBEF9820065D4E5 /* PasswordLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A9B1FBEF9820065D4E5 /* PasswordLoginViewModel.swift */; };
+		8C0F7A9E1FBEFA400065D4E5 /* PasswordLoginViewModelFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F7A9D1FBEFA400065D4E5 /* PasswordLoginViewModelFromDB.swift */; };
+		8C1F69CA1FBC9DA000035A45 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69C91FBC9DA000035A45 /* TransactionTableViewCell.swift */; };
+		8C1F69CC1FBC9E7500035A45 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69CB1FBC9E7500035A45 /* TransactionViewController.swift */; };
+		8C1F69CF1FBD7ACB00035A45 /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69CE1FBD7ACB00035A45 /* TransactionCellViewModel.swift */; };
+		8C1F69D11FBD7B5C00035A45 /* TransactionCellViewModelFromEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69D01FBD7B5C00035A45 /* TransactionCellViewModelFromEntry.swift */; };
+		8C1F69D31FBD80E200035A45 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69D21FBD80E200035A45 /* TransactionViewModel.swift */; };
+		8C1F69D51FBD88BD00035A45 /* TransactionViewModelFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F69D41FBD88BD00035A45 /* TransactionViewModelFromDate.swift */; };
+		8C5611EA1FB3140F001EA347 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611E91FB3140E001EA347 /* CategoryCollectionViewCell.swift */; };
+		8C5611EC1FB3446A001EA347 /* CategoryAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611EB1FB3446A001EA347 /* CategoryAmountViewModel.swift */; };
+		8C5611EE1FB344EE001EA347 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611ED1FB344EE001EA347 /* Dynamic.swift */; };
+		8C5611F01FB3467E001EA347 /* CategoryAmountViewModelWithAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611EF1FB3467E001EA347 /* CategoryAmountViewModelWithAmount.swift */; };
+		8C5611F21FB3468E001EA347 /* CategoryAmountViewModelWithoutAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611F11FB3468E001EA347 /* CategoryAmountViewModelWithoutAmount.swift */; };
+		8C5611F41FB348D3001EA347 /* RealmMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611F31FB348D3001EA347 /* RealmMapper.swift */; };
+		8C5611F61FB356C4001EA347 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611F51FB356C4001EA347 /* Settings.swift */; };
+		8C5611F81FB35AF9001EA347 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611F71FB35AF9001EA347 /* ExpenseViewModel.swift */; };
+		8C5611FA1FB35D63001EA347 /* ExpenseViewModelFromTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611F91FB35D63001EA347 /* ExpenseViewModelFromTimeInterval.swift */; };
+		8C5611FD1FB46006001EA347 /* ApplicationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5611FC1FB46006001EA347 /* ApplicationFlowController.swift */; };
+		8C5612091FB465FC001EA347 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C5612081FB465FC001EA347 /* Colors.txt */; };
+		8C56120C1FB467A4001EA347 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56120A1FB467A3001EA347 /* Colors.swift */; };
+		8C56120D1FB467A4001EA347 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56120B1FB467A4001EA347 /* Storyboards.swift */; };
+		8CF785C11FAC973400971022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785C01FAC973400971022 /* AppDelegate.swift */; };
+		8CF785C31FAC973400971022 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785C21FAC973400971022 /* ExpenseViewController.swift */; };
+		8CF785C61FAC973400971022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF785C41FAC973400971022 /* Main.storyboard */; };
+		8CF785C81FAC973400971022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF785C71FAC973400971022 /* Assets.xcassets */; };
+		8CF785CB1FAC973400971022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF785C91FAC973400971022 /* LaunchScreen.storyboard */; };
+		8CF785D61FAC973400971022 /* MoneyTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785D51FAC973400971022 /* MoneyTrackerTests.swift */; };
+		8CF785E11FAC973400971022 /* MoneyTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785E01FAC973400971022 /* MoneyTrackerUITests.swift */; };
+		8CF785FE1FB216EB00971022 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785FD1FB216EB00971022 /* Entry.swift */; };
+		8CF786001FB216FC00971022 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF785FF1FB216FC00971022 /* Category.swift */; };
+		8CFF433C1FC329C50090CC6E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF433B1FC329C50090CC6E /* NavigationButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CF785D21FAC973400971022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CF785B51FAC973400971022 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF785BC1FAC973400971022;
+			remoteInfo = MoneyTracker;
+		};
+		8CF785DD1FAC973400971022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CF785B51FAC973400971022 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF785BC1FAC973400971022;
+			remoteInfo = MoneyTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CD56E27F59D46B8E29012C1 /* Pods-MoneyTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyTracker/Pods-MoneyTracker.release.xcconfig"; sourceTree = "<group>"; };
+		72ABA5A710B56D605183A681 /* Pods-MoneyTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyTracker/Pods-MoneyTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		7F7D9B600CF0DB0B3479F430 /* Pods_MoneyTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C04F5331FB9C2BB001CFFA4 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8C0DFD391FB5A48700511041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8C0DFD3B1FB5D58300511041 /* InsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTableViewCell.swift; sourceTree = "<group>"; };
+		8C0DFD3D1FB5DB4800511041 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		8C0DFD3F1FB5DD4200511041 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
+		8C0DFD411FB5DDF100511041 /* AddExpenseViewModelFromCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModelFromCategory.swift; sourceTree = "<group>"; };
+		8C0DFD4B1FB5FEE200511041 /* AddExpenseCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExpenseCellViewModel.swift; sourceTree = "<group>"; };
+		8C0DFD4D1FB6006000511041 /* AddExpenseCellViewModelFromEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseCellViewModelFromEntry.swift; sourceTree = "<group>"; };
+		8C0F7A8B1FBDE3B30065D4E5 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		8C0F7A8D1FBDE3D90065D4E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8C0F7A8F1FBDE4EE0065D4E5 /* SettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellViewModel.swift; sourceTree = "<group>"; };
+		8C0F7A921FBDE69A0065D4E5 /* SettingCellViewModelFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellViewModelFromDB.swift; sourceTree = "<group>"; };
+		8C0F7A941FBDE8770065D4E5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		8C0F7A961FBDE8860065D4E5 /* SettingsViewModelFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelFromDB.swift; sourceTree = "<group>"; };
+		8C0F7A981FBEEB5A0065D4E5 /* PasswordLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewController.swift; sourceTree = "<group>"; };
+		8C0F7A9B1FBEF9820065D4E5 /* PasswordLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewModel.swift; sourceTree = "<group>"; };
+		8C0F7A9D1FBEFA400065D4E5 /* PasswordLoginViewModelFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewModelFromDB.swift; sourceTree = "<group>"; };
+		8C1F69C91FBC9DA000035A45 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		8C1F69CB1FBC9E7500035A45 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		8C1F69CE1FBD7ACB00035A45 /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
+		8C1F69D01FBD7B5C00035A45 /* TransactionCellViewModelFromEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModelFromEntry.swift; sourceTree = "<group>"; };
+		8C1F69D21FBD80E200035A45 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		8C1F69D41FBD88BD00035A45 /* TransactionViewModelFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelFromDate.swift; sourceTree = "<group>"; };
+		8C5611E91FB3140E001EA347 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C5611EB1FB3446A001EA347 /* CategoryAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAmountViewModel.swift; sourceTree = "<group>"; };
+		8C5611ED1FB344EE001EA347 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		8C5611EF1FB3467E001EA347 /* CategoryAmountViewModelWithAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAmountViewModelWithAmount.swift; sourceTree = "<group>"; };
+		8C5611F11FB3468E001EA347 /* CategoryAmountViewModelWithoutAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAmountViewModelWithoutAmount.swift; sourceTree = "<group>"; };
+		8C5611F31FB348D3001EA347 /* RealmMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMapper.swift; sourceTree = "<group>"; };
+		8C5611F51FB356C4001EA347 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		8C5611F71FB35AF9001EA347 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
+		8C5611F91FB35D63001EA347 /* ExpenseViewModelFromTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModelFromTimeInterval.swift; sourceTree = "<group>"; };
+		8C5611FC1FB46006001EA347 /* ApplicationFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFlowController.swift; sourceTree = "<group>"; };
+		8C5612081FB465FC001EA347 /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
+		8C56120A1FB467A3001EA347 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8C56120B1FB467A4001EA347 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		8CF785BD1FAC973400971022 /* MoneyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF785C01FAC973400971022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CF785C21FAC973400971022 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
+		8CF785C51FAC973400971022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CF785C71FAC973400971022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CF785CA1FAC973400971022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CF785CC1FAC973400971022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF785D11FAC973400971022 /* MoneyTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF785D51FAC973400971022 /* MoneyTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTrackerTests.swift; sourceTree = "<group>"; };
+		8CF785D71FAC973400971022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF785DC1FAC973400971022 /* MoneyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF785E01FAC973400971022 /* MoneyTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTrackerUITests.swift; sourceTree = "<group>"; };
+		8CF785E21FAC973400971022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF785FD1FB216EB00971022 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		8CF785FF1FB216FC00971022 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8CFF433B1FC329C50090CC6E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CF785BA1FAC973400971022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F3E1F9155864A4F7DDFE45 /* Pods_MoneyTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785CE1FAC973400971022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785D91FAC973400971022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C3DB160267BF32F662FF4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72ABA5A710B56D605183A681 /* Pods-MoneyTracker.debug.xcconfig */,
+				4CD56E27F59D46B8E29012C1 /* Pods-MoneyTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C04F5301FB9A4FC001CFFA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8C0DFD451FB5DE3000511041 /* CategoryAmountViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C5611F71FB35AF9001EA347 /* ExpenseViewModel.swift */,
+				8C5611F91FB35D63001EA347 /* ExpenseViewModelFromTimeInterval.swift */,
+				8C5611EB1FB3446A001EA347 /* CategoryAmountViewModel.swift */,
+				8C5611EF1FB3467E001EA347 /* CategoryAmountViewModelWithAmount.swift */,
+				8C5611F11FB3468E001EA347 /* CategoryAmountViewModelWithoutAmount.swift */,
+			);
+			path = CategoryAmountViewModel;
+			sourceTree = "<group>";
+		};
+		8C0DFD471FB5DE6000511041 /* AddExpenseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C0DFD3F1FB5DD4200511041 /* AddExpenseViewModel.swift */,
+				8C0DFD411FB5DDF100511041 /* AddExpenseViewModelFromCategory.swift */,
+				8C0DFD4B1FB5FEE200511041 /* AddExpenseCellViewModel.swift */,
+				8C0DFD4D1FB6006000511041 /* AddExpenseCellViewModelFromEntry.swift */,
+			);
+			path = AddExpenseViewModel;
+			sourceTree = "<group>";
+		};
+		8C0F7A911FBDE5050065D4E5 /* SettingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C0F7A941FBDE8770065D4E5 /* SettingsViewModel.swift */,
+				8C0F7A961FBDE8860065D4E5 /* SettingsViewModelFromDB.swift */,
+				8C0F7A8F1FBDE4EE0065D4E5 /* SettingCellViewModel.swift */,
+				8C0F7A921FBDE69A0065D4E5 /* SettingCellViewModelFromDB.swift */,
+			);
+			path = SettingViewModel;
+			sourceTree = "<group>";
+		};
+		8C0F7A9A1FBEF94B0065D4E5 /* PasswordLoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C0F7A9B1FBEF9820065D4E5 /* PasswordLoginViewModel.swift */,
+				8C0F7A9D1FBEFA400065D4E5 /* PasswordLoginViewModelFromDB.swift */,
+			);
+			path = PasswordLoginViewModel;
+			sourceTree = "<group>";
+		};
+		8C1F69C61FBC71D700035A45 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8C1F69CD1FBCA12600035A45 /* TransactionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F69D21FBD80E200035A45 /* TransactionViewModel.swift */,
+				8C1F69D41FBD88BD00035A45 /* TransactionViewModelFromDate.swift */,
+				8C1F69CE1FBD7ACB00035A45 /* TransactionCellViewModel.swift */,
+				8C1F69D01FBD7B5C00035A45 /* TransactionCellViewModelFromEntry.swift */,
+			);
+			path = TransactionViewModel;
+			sourceTree = "<group>";
+		};
+		8C5611E81FB3140E001EA347 /* CompositeView */ = {
+			isa = PBXGroup;
+			children = (
+				8C5611E91FB3140E001EA347 /* CategoryCollectionViewCell.swift */,
+				8C0DFD3B1FB5D58300511041 /* InsertTableViewCell.swift */,
+				8C1F69C91FBC9DA000035A45 /* TransactionTableViewCell.swift */,
+				8C0F7A8B1FBDE3B30065D4E5 /* SettingsTableViewCell.swift */,
+			);
+			path = CompositeView;
+			sourceTree = "<group>";
+		};
+		8C5611FB1FB45FEB001EA347 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				8C5611FC1FB46006001EA347 /* ApplicationFlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		8C5612001FB463DB001EA347 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785C91FAC973400971022 /* LaunchScreen.storyboard */,
+				8CF785C41FAC973400971022 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C5612011FB463E4001EA347 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8C5612081FB465FC001EA347 /* Colors.txt */,
+				8CF785C71FAC973400971022 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8C5612021FB4641D001EA347 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785C01FAC973400971022 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8C5612031FB46427001EA347 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785CC1FAC973400971022 /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		8C5612061FB465D2001EA347 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8C5612071FB465DC001EA347 /* Swiftgen */,
+				8C04F5331FB9C2BB001CFFA4 /* Enums.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8C5612071FB465DC001EA347 /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				8C56120A1FB467A3001EA347 /* Colors.swift */,
+				8C56120B1FB467A4001EA347 /* Storyboards.swift */,
+			);
+			path = Swiftgen;
+			sourceTree = "<group>";
+		};
+		8CF785B41FAC973400971022 = {
+			isa = PBXGroup;
+			children = (
+				8CF785BF1FAC973400971022 /* MoneyTracker */,
+				8CF785D41FAC973400971022 /* MoneyTrackerTests */,
+				8CF785DF1FAC973400971022 /* MoneyTrackerUITests */,
+				8CF785BE1FAC973400971022 /* Products */,
+				02C3DB160267BF32F662FF4E /* Pods */,
+				B27E25A08C561768EC6B036E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CF785BE1FAC973400971022 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785BD1FAC973400971022 /* MoneyTracker.app */,
+				8CF785D11FAC973400971022 /* MoneyTrackerTests.xctest */,
+				8CF785DC1FAC973400971022 /* MoneyTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CF785BF1FAC973400971022 /* MoneyTracker */ = {
+			isa = PBXGroup;
+			children = (
+				8C04F5301FB9A4FC001CFFA4 /* Extensions */,
+				8C5612061FB465D2001EA347 /* Config */,
+				8C5612031FB46427001EA347 /* Misc */,
+				8C5612021FB4641D001EA347 /* AppDelegate */,
+				8C5612011FB463E4001EA347 /* Assets */,
+				8C5612001FB463DB001EA347 /* Storyboards */,
+				8C5611FB1FB45FEB001EA347 /* FlowController */,
+				8CF786011FB2171100971022 /* Mappers */,
+				8C1F69C61FBC71D700035A45 /* Helper */,
+				8CF785FC1FB216D100971022 /* Models */,
+				8CF785FB1FB20DFC00971022 /* View */,
+				8CF785EE1FB1B41400971022 /* View Models */,
+			);
+			path = MoneyTracker;
+			sourceTree = "<group>";
+		};
+		8CF785D41FAC973400971022 /* MoneyTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785D51FAC973400971022 /* MoneyTrackerTests.swift */,
+				8CF785D71FAC973400971022 /* Info.plist */,
+			);
+			path = MoneyTrackerTests;
+			sourceTree = "<group>";
+		};
+		8CF785DF1FAC973400971022 /* MoneyTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785E01FAC973400971022 /* MoneyTrackerUITests.swift */,
+				8CF785E21FAC973400971022 /* Info.plist */,
+			);
+			path = MoneyTrackerUITests;
+			sourceTree = "<group>";
+		};
+		8CF785EE1FB1B41400971022 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C5611ED1FB344EE001EA347 /* Dynamic.swift */,
+				8C1F69CD1FBCA12600035A45 /* TransactionViewModel */,
+				8C0DFD451FB5DE3000511041 /* CategoryAmountViewModel */,
+				8C0DFD471FB5DE6000511041 /* AddExpenseViewModel */,
+				8C0F7A911FBDE5050065D4E5 /* SettingViewModel */,
+				8C0F7A9A1FBEF94B0065D4E5 /* PasswordLoginViewModel */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		8CF785FB1FB20DFC00971022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CFF433D1FC329D70090CC6E /* CustomViewComponents */,
+				8C5611E81FB3140E001EA347 /* CompositeView */,
+				8C0DFD391FB5A48700511041 /* MainTabBarController.swift */,
+				8CF785C21FAC973400971022 /* ExpenseViewController.swift */,
+				8C0DFD3D1FB5DB4800511041 /* AddExpenseViewController.swift */,
+				8C1F69CB1FBC9E7500035A45 /* TransactionViewController.swift */,
+				8C0F7A8D1FBDE3D90065D4E5 /* SettingsViewController.swift */,
+				8C0F7A981FBEEB5A0065D4E5 /* PasswordLoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CF785FC1FB216D100971022 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CF785FD1FB216EB00971022 /* Entry.swift */,
+				8CF785FF1FB216FC00971022 /* Category.swift */,
+				8C5611F51FB356C4001EA347 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CF786011FB2171100971022 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				8C5611F31FB348D3001EA347 /* RealmMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8CFF433D1FC329D70090CC6E /* CustomViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8CFF433B1FC329C50090CC6E /* NavigationButton.swift */,
+			);
+			path = CustomViewComponents;
+			sourceTree = "<group>";
+		};
+		B27E25A08C561768EC6B036E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F7D9B600CF0DB0B3479F430 /* Pods_MoneyTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CF785BC1FAC973400971022 /* MoneyTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF785E51FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTracker" */;
+			buildPhases = (
+				928BB27DA5BE13C3A3560446 /* [CP] Check Pods Manifest.lock */,
+				8CF785B91FAC973400971022 /* Sources */,
+				8CF785BA1FAC973400971022 /* Frameworks */,
+				8CF785BB1FAC973400971022 /* Resources */,
+				653884A214EBC2A84DEC91BF /* [CP] Embed Pods Frameworks */,
+				52FAA13F4BB337E158038A44 /* [CP] Copy Pods Resources */,
+				8C5611FF1FB461FA001EA347 /* Swiftgen */,
+				8C56120E1FB4B39F001EA347 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneyTracker;
+			productName = MoneyTracker;
+			productReference = 8CF785BD1FAC973400971022 /* MoneyTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CF785D01FAC973400971022 /* MoneyTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF785E81FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTrackerTests" */;
+			buildPhases = (
+				8CF785CD1FAC973400971022 /* Sources */,
+				8CF785CE1FAC973400971022 /* Frameworks */,
+				8CF785CF1FAC973400971022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CF785D31FAC973400971022 /* PBXTargetDependency */,
+			);
+			name = MoneyTrackerTests;
+			productName = MoneyTrackerTests;
+			productReference = 8CF785D11FAC973400971022 /* MoneyTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CF785DB1FAC973400971022 /* MoneyTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF785EB1FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTrackerUITests" */;
+			buildPhases = (
+				8CF785D81FAC973400971022 /* Sources */,
+				8CF785D91FAC973400971022 /* Frameworks */,
+				8CF785DA1FAC973400971022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CF785DE1FAC973400971022 /* PBXTargetDependency */,
+			);
+			name = MoneyTrackerUITests;
+			productName = MoneyTrackerUITests;
+			productReference = 8CF785DC1FAC973400971022 /* MoneyTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CF785B51FAC973400971022 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Zesium;
+				TargetAttributes = {
+					8CF785BC1FAC973400971022 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					8CF785D01FAC973400971022 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8CF785BC1FAC973400971022;
+					};
+					8CF785DB1FAC973400971022 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8CF785BC1FAC973400971022;
+					};
+				};
+			};
+			buildConfigurationList = 8CF785B81FAC973400971022 /* Build configuration list for PBXProject "MoneyTracker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CF785B41FAC973400971022;
+			productRefGroup = 8CF785BE1FAC973400971022 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CF785BC1FAC973400971022 /* MoneyTracker */,
+				8CF785D01FAC973400971022 /* MoneyTrackerTests */,
+				8CF785DB1FAC973400971022 /* MoneyTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CF785BB1FAC973400971022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF785CB1FAC973400971022 /* LaunchScreen.storyboard in Resources */,
+				8CF785C81FAC973400971022 /* Assets.xcassets in Resources */,
+				8C5612091FB465FC001EA347 /* Colors.txt in Resources */,
+				8CF785C61FAC973400971022 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785CF1FAC973400971022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785DA1FAC973400971022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52FAA13F4BB337E158038A44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyTracker/Pods-MoneyTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		653884A214EBC2A84DEC91BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyTracker/Pods-MoneyTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SmileLock/SmileLock.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SmileLock.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyTracker/Pods-MoneyTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C5611FF1FB461FA001EA347 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which $PODS_ROOT/SwiftGen/bin/swiftgen >/dev/null; then\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards \"$PROJECT_DIR/MoneyTracker/Storyboards\" -t swift4 --output \"$PROJECT_DIR/MoneyTracker/Config/Swiftgen/Storyboards.swift\"\n#$PODS_ROOT/SwiftGen/bin/swiftgen strings \"$PROJECT_DIR/MoneyTracker/Assets/Base.lproj/Localizable.strings\" -t structured-swift4 --output \"$PROJECT_DIR/MoneyTracker/Config/Swiftgen/Strings.swift\"\n$PODS_ROOT/SwiftGen/bin/swiftgen fonts \"$PROJECT_DIR/MoneyTracker/Assets/Fonts\" -t swift4 --output \"$PROJECT_DIR/MoneyTracker/Config/Swiftgen/Fonts.swift\"\n$PODS_ROOT/SwiftGen/bin/swiftgen colors \"$PROJECT_DIR/MoneyTracker/Assets/Colors.txt\" -t swift4 --output \"$PROJECT_DIR/MoneyTracker/Config/Swiftgen/Colors.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+		8C56120E1FB4B39F001EA347 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		928BB27DA5BE13C3A3560446 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CF785B91FAC973400971022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5611F41FB348D3001EA347 /* RealmMapper.swift in Sources */,
+				8C56120C1FB467A4001EA347 /* Colors.swift in Sources */,
+				8C5611F81FB35AF9001EA347 /* ExpenseViewModel.swift in Sources */,
+				8C0F7A931FBDE69A0065D4E5 /* SettingCellViewModelFromDB.swift in Sources */,
+				8C0F7A951FBDE8770065D4E5 /* SettingsViewModel.swift in Sources */,
+				8C5611F01FB3467E001EA347 /* CategoryAmountViewModelWithAmount.swift in Sources */,
+				8C0DFD4E1FB6006000511041 /* AddExpenseCellViewModelFromEntry.swift in Sources */,
+				8C0DFD3C1FB5D58300511041 /* InsertTableViewCell.swift in Sources */,
+				8C0DFD401FB5DD4200511041 /* AddExpenseViewModel.swift in Sources */,
+				8C5611EC1FB3446A001EA347 /* CategoryAmountViewModel.swift in Sources */,
+				8C0F7A9C1FBEF9820065D4E5 /* PasswordLoginViewModel.swift in Sources */,
+				8CF785FE1FB216EB00971022 /* Entry.swift in Sources */,
+				8C5611EA1FB3140F001EA347 /* CategoryCollectionViewCell.swift in Sources */,
+				8C0DFD4C1FB5FEE200511041 /* AddExpenseCellViewModel.swift in Sources */,
+				8C1F69D51FBD88BD00035A45 /* TransactionViewModelFromDate.swift in Sources */,
+				8C5611F21FB3468E001EA347 /* CategoryAmountViewModelWithoutAmount.swift in Sources */,
+				8C56120D1FB467A4001EA347 /* Storyboards.swift in Sources */,
+				8C5611FD1FB46006001EA347 /* ApplicationFlowController.swift in Sources */,
+				8C04F5341FB9C2BB001CFFA4 /* Enums.swift in Sources */,
+				8C5611EE1FB344EE001EA347 /* Dynamic.swift in Sources */,
+				8C5611FA1FB35D63001EA347 /* ExpenseViewModelFromTimeInterval.swift in Sources */,
+				8C0DFD3E1FB5DB4800511041 /* AddExpenseViewController.swift in Sources */,
+				8CF785C31FAC973400971022 /* ExpenseViewController.swift in Sources */,
+				8CF785C11FAC973400971022 /* AppDelegate.swift in Sources */,
+				8C0F7A8E1FBDE3D90065D4E5 /* SettingsViewController.swift in Sources */,
+				8C1F69CF1FBD7ACB00035A45 /* TransactionCellViewModel.swift in Sources */,
+				8C0F7A971FBDE8860065D4E5 /* SettingsViewModelFromDB.swift in Sources */,
+				8C5611F61FB356C4001EA347 /* Settings.swift in Sources */,
+				8C1F69CA1FBC9DA000035A45 /* TransactionTableViewCell.swift in Sources */,
+				8C0F7A901FBDE4EE0065D4E5 /* SettingCellViewModel.swift in Sources */,
+				8C1F69D31FBD80E200035A45 /* TransactionViewModel.swift in Sources */,
+				8C0F7A9E1FBEFA400065D4E5 /* PasswordLoginViewModelFromDB.swift in Sources */,
+				8C1F69D11FBD7B5C00035A45 /* TransactionCellViewModelFromEntry.swift in Sources */,
+				8C0F7A8C1FBDE3B30065D4E5 /* SettingsTableViewCell.swift in Sources */,
+				8CFF433C1FC329C50090CC6E /* NavigationButton.swift in Sources */,
+				8C1F69CC1FBC9E7500035A45 /* TransactionViewController.swift in Sources */,
+				8C0DFD421FB5DDF100511041 /* AddExpenseViewModelFromCategory.swift in Sources */,
+				8CF786001FB216FC00971022 /* Category.swift in Sources */,
+				8C0F7A991FBEEB5A0065D4E5 /* PasswordLoginViewController.swift in Sources */,
+				8C0DFD3A1FB5A48700511041 /* MainTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785CD1FAC973400971022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF785D61FAC973400971022 /* MoneyTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF785D81FAC973400971022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF785E11FAC973400971022 /* MoneyTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CF785D31FAC973400971022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CF785BC1FAC973400971022 /* MoneyTracker */;
+			targetProxy = 8CF785D21FAC973400971022 /* PBXContainerItemProxy */;
+		};
+		8CF785DE1FAC973400971022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CF785BC1FAC973400971022 /* MoneyTracker */;
+			targetProxy = 8CF785DD1FAC973400971022 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8CF785C41FAC973400971022 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CF785C51FAC973400971022 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8CF785C91FAC973400971022 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CF785CA1FAC973400971022 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CF785E31FAC973400971022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CF785E41FAC973400971022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CF785E61FAC973400971022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72ABA5A710B56D605183A681 /* Pods-MoneyTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = "$(SRCROOT)/MoneyTracker/Misc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CF785E71FAC973400971022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD56E27F59D46B8E29012C1 /* Pods-MoneyTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = "$(SRCROOT)/MoneyTracker/Misc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8CF785E91FAC973400971022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = MoneyTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTracker.app/MoneyTracker";
+			};
+			name = Debug;
+		};
+		8CF785EA1FAC973400971022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = MoneyTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTracker.app/MoneyTracker";
+			};
+			name = Release;
+		};
+		8CF785EC1FAC973400971022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = MoneyTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneyTracker;
+			};
+			name = Debug;
+		};
+		8CF785ED1FAC973400971022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QQR76XAUZ;
+				INFOPLIST_FILE = MoneyTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.MoneyTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneyTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CF785B81FAC973400971022 /* Build configuration list for PBXProject "MoneyTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF785E31FAC973400971022 /* Debug */,
+				8CF785E41FAC973400971022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF785E51FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF785E61FAC973400971022 /* Debug */,
+				8CF785E71FAC973400971022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF785E81FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF785E91FAC973400971022 /* Debug */,
+				8CF785EA1FAC973400971022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF785EB1FAC973400971022 /* Build configuration list for PBXNativeTarget "MoneyTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF785EC1FAC973400971022 /* Debug */,
+				8CF785ED1FAC973400971022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CF785B51FAC973400971022 /* Project object */;
+}

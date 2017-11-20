@@ -1,0 +1,34 @@
+excluded: # do not run swiftlint on pods
+  - Pods
+  - MoneyTracker/Config/Swiftgen
+
+variable_name: #exclude variables from naming rules
+  excluded:
+    - vc # variable used by apple internally
+    - id
+    - ID
+    - example
+
+line_length: 120 # set maximum line length
+
+disabled_rules: # rule identifiers to disable globally
+# all rules: https://github.com/realm/SwiftLint/tree/master/Source/SwiftLintFramework/Rules
+
+custom_rules:
+  dont_use_print: # rule identifier
+    name: "Do not use the default print method" # rule name. optional.
+    regex: 'print\(' # matching pattern
+    match_kinds: # SyntaxKinds to match. optional.
+      - comment
+      - identifier
+    message:'Use debugPrint("File:\(#file), Function:\(#function), Line: \(#line)" + "place param here")' # violation message. optional.
+    severity: error # violation severity. optional.
+
+  dont_use_uiwebview: # rule identifier
+    name: "Do not use the depricated UIWebView" # rule name. optional
+    regex: 'UIWebView' # matching pattern
+    match_kinds: # SyntaxKinds to match. optional
+      - typeidentifier
+    message: "UIWebView is depricated since iOS 8. Please use WKWebView" # violation message.
+    severity: error # to prevent build from running
+
